@@ -14,8 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::middleware(['auth'])->group(function (){
-    Route::get('/', function () {
-        // dd(auth()->user());
-        return view('admin.dashboard');
-    });
+});
+
+Route::get('/', function () {
+    return view('welcome');
 });
