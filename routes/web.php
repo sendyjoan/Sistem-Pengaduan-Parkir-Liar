@@ -15,12 +15,12 @@ use App\Http\Controllers\AduanController;
 */
 
 Route::middleware(['auth'])->group(function (){
-    Route::get('/dashboard', function () {
-        return view('admin.dashboard');
-    });
-    Route::prefix('admin')->group(function () {
+    Route::prefix('/dashboard')->group(function () {
         Route::get('/users', function () {
             dd(auth()->user()->name);
+        });
+        Route::get('/', function () {
+            return view('admin.dashboard');
         });
         Route::resource('aduan', AduanController::class);
     });
