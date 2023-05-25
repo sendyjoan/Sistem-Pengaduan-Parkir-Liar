@@ -15,6 +15,10 @@
                 </div>
 
                 <div class="card-body">
+                    {{-- <div class="text-center">
+                        Sistem Pengaduan Parkir Liar
+                    </div>     --}}
+
                     <form method="POST" action="{{route('login')}}" class="needs-validation" novalidate="">
                         @csrf
                         <div class="form-group">
@@ -58,7 +62,7 @@
                 Don't have an account? <a href="{{ route('register')}}">Create One</a>
             </div>
             <div class="simple-footer">
-                Copyright &copy; Stisla 2018
+                Copyright &copy; Sistem Pelaporan Parkir Liar
             </div>
         </div>
     </div>
