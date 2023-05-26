@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Status;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
@@ -15,14 +16,20 @@ class StatusSeeder extends Seeder
      */
     public function run()
     {
-        $statuses = [
-            ['status_name' => 'Registered'],
-            ['status_name' => 'Verified'],
-            ['status_name' => 'Rejected'],
-            ['status_name' => 'Processed'],
-            ['status_name' => 'Clossed'],
-        ];
-
-        DB::table('statuses')->insert($statuses);
+        Status::create([
+            'status_name' => 'Registered',
+        ]);
+        Status::create([
+            'status_name' => 'Verified',
+        ]);
+        Status::create([
+            'status_name' => 'Rejected',
+        ]);
+        Status::create([
+            'status_name' => 'Processed',
+        ]);
+        Status::create([
+            'status_name' => 'Clossed',
+        ]);
     }
 }
